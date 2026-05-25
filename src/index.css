@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap');
+
+/* ========================================
+   DESIGN TOKENS
+   ======================================== */
+:root {
+  /* Colors — Deep Space Theme */
+  --bg-primary: #070b1a;
+  --bg-secondary: #0d1230;
+  --bg-card: rgba(15, 20, 55, 0.65);
+  --bg-card-hover: rgba(20, 28, 70, 0.75);
+  --bg-glass: rgba(255, 255, 255, 0.04);
+  --bg-glass-hover: rgba(255, 255, 255, 0.08);
+
+  --text-primary: #e8eaf6;
+  --text-secondary: rgba(232, 234, 246, 0.6);
+  --text-muted: rgba(232, 234, 246, 0.35);
+  --text-placeholder: rgba(232, 234, 246, 0.25);
+
+  /* Accent Gradients */
+  --accent-cyan: #00d4ff;
+  --accent-purple: #7c3aed;
+  --accent-pink: #f472b6;
+  --accent-blue: #3b82f6;
+
+  --gradient-primary: linear-gradient(135deg, #00d4ff 0%, #7c3aed 50%, #f472b6 100%);
+  --gradient-accent: linear-gradient(135deg, #00d4ff 0%, #7c3aed 100%);
+  --gradient-warm: linear-gradient(135deg, #7c3aed 0%, #f472b6 100%);
+  --gradient-card-border: linear-gradient(135deg, rgba(0, 212, 255, 0.3), rgba(124, 58, 237, 0.3), rgba(244, 114, 182, 0.1));
+
+  /* Borders */
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-medium: rgba(255, 255, 255, 0.1);
+  --border-accent: rgba(0, 212, 255, 0.3);
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.5);
+  --shadow-glow-cyan: 0 0 20px rgba(0, 212, 255, 0.15);
+  --shadow-glow-purple: 0 0 20px rgba(124, 58, 237, 0.15);
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Typography */
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-display: 'Outfit', 'Inter', sans-serif;
+
+  /* Z-Index */
+  --z-base: 1;
+  --z-overlay: 100;
+  --z-modal: 200;
+  --z-loading: 300;
+}
+
+/* ========================================
+   RESET & BASE
+   ======================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100dvh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100dvh;
+}
+
+/* Remove default styles */
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  color: inherit;
+}
+
+select {
+  font-family: inherit;
+}
+
+textarea {
+  font-family: inherit;
+  resize: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-full);
+}
